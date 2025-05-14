@@ -14,7 +14,7 @@
     <p>O projeto foi idealizado para solucionar a limitação de plataformas SaaS tradicionais, permitindo à loja atualizar seu cardápio com agilidade, clareza e flexibilidade, promovendo uma melhor experiência para o cliente e mais autonomia para o administrador. </p>
 
 <h2> 🎯 Objetivo </h2>
-    <h3> - Criar um painel administrativo e um frontend interativo para gerenciar um cardápio digital completo, com suporte a: </h3>
+    <h3> Criar um painel administrativo e um frontend interativo para gerenciar um cardápio digital completo, com suporte a: </h3>
 
   <li> Múltiplos cardápios (por dia da semana ou por temporada) </li>
   <li> Cadastro com imagem, nome, descrição e preço </li>
