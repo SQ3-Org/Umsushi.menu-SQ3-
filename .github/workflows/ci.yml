@@ -1,11 +1,8 @@
 name: CI Pipeline
 
 on: 
-  push: 
-    branches: [ main ]
-  
   pull_request: 
-    branches: [ main ]
+    branches: [ main, develop ]
 
 jobs: 
   continuous-integration: 
@@ -34,4 +31,5 @@ jobs:
        - name: Realizar a build #Simular build, pois ainda não foi implementado Next ou Nest para a build ser realizada.
          run: npm run build
 
-         #O Vercel e o Railway já possuem um deploy automatico ao serem linkados no repositorio do Github. Verificar com o professor se pode deixar assim ou ele deseja o link manual usando o secrets.
+         # O Vercel e o Railway já possuem um deploy automatico ao serem linkados no repositorio do Github.
+         # Verificar com o professor se pode deixar assim ou ele deseja o link manual usando o secrets.
