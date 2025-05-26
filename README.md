@@ -36,7 +36,6 @@
         <li>Caique Ramos da Silva</li>
         <li>Carlos Eduardo Martins Fortunato</li>
         <li>Felipe Fornazeli Rocha</li>
-        <li>Lucas Teles de Andrade</li>
         <li>Marcos Yago Rocha Vieira</li>
         <li>Mateus Marins Real dos Santos</li>
         <li>Matheus Reis Machado</li>
