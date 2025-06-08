@@ -15,13 +15,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: '22'
 
       - name: Instalar dependências
-        run: npm install
+        run: npm ci
 
       - name: Rodar Linter
-        run: npm run lint
+        run: npx eslint . --max-warnings=5
 
       - name: Rodar testes
         run: npm test
