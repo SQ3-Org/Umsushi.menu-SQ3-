@@ -2,6 +2,9 @@ name: CI Pipeline Frontend
 
 on:
   pull_request:
+    branches:
+      - develop
+      - main
     paths:
       - 'frontend/**'
 
@@ -23,7 +26,7 @@ jobs:
         working-directory: frontend
 
       - name: Rodar Linter frontend
-        run: npx eslint . --max-warnings=5
+        run: "eslint . --max-warnings=5"
         working-directory: frontend
 
       - name: Rodar testes frontend
