@@ -13,18 +13,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModalBtn = modal.querySelector('button');
   const filtrosNav = document.getElementById('filtros-nav');
   const produtos = [
-      { nome: "Hot Roll", preco: "R$25,90", img: "/src/img/Produtos/Hot Roll.jpg", desc: "Deliciosos rolos de sushi empanados e fritos, com recheio de salmão e cream cheese.", tags: ["quente", "crocante", "favorito"], categoria: "Sushis" },
-      { nome: "Temaki de Salmão", preco: "R$29,90", img: "/src/img/Produtos/Temaki de Salmão.jpg", desc: "Cone de alga recheado com arroz, salmão fresco e cebolinha.", tags: ["frio", "salmão"], categoria: "Sushis" },
-      { nome: "Uramaki", preco: "R$24,90", img: "/src/img/Produtos/Urakami.jpg", desc: "Sushi enrolado com o arroz por fora, recheado com salmão e manga.", tags: ["frio"], categoria: "Sushis" },
-      { nome: "Sashimi", preco: "R$32,90", img: "/src/img/Produtos/Sashimi.jpg", desc: "Fatias finas de peixe fresco, servido puro.", tags: ["frio", "clássico"], categoria: "Sashimis" },
-      { nome: "Sushi de Camarão", preco: "R$27,90", img: "/src/img/baixados.jpeg", desc: "Bolinho de arroz coberto com camarão cozido.", tags: ["frio", "camarão"], categoria: "Sushis" },
-      { nome: "Sushi Vegano", preco: "R$23,90", img: "/src/img/Produtos/Sushi Vegano.jpg", desc: "Opção vegana com pepino, manga e abacate.", tags: ["vegano", "frio"], categoria: "Sushis" },
-      { nome: "Gyoza", preco: "R$18,90", img: "/src/img/Produtos/gyoza.jpg", desc: "Pastéis japoneses recheados com carne e vegetais.", tags: ["quente"], categoria: "Entradas" },
-      { nome: "Sunomono", preco: "R$15,90", img: "/src/img/Produtos/Sunomono.jpg", desc: "Salada de pepino agridoce com gergelim.", tags: ["salada", "vegano"], categoria: "Entradas" },
-      { nome: "Yakissoba", preco: "R$28,90", img: "/src/img/Produtos/Yakissoba.jpg", desc: "Macarrão frito com vegetais e carne.", tags: ["quente", "massa"], categoria: "Pratos Quentes" }, // Categoria adicionada
-      { nome: "Guioza de frango", preco: "R$19,90", img: "/src/img/Produtos/Guioza de Frango.jpg", desc: "Pastéis japoneses recheados com frango e vegetais.", tags: ["quente"], categoria: "Entradas" },
-      { nome: "Refrigerante", preco: "R$6,00", img: "/src/img/Produtos/Refrigerante.jpg", desc: "Lata de 350ml, diversos sabores.", tags: ["bebida"], categoria: "Bebidas" },
-      { nome: "Sake", preco: "R$12,00", img: "/src/img/Produtos/Sake.jpg", desc: "Dose da tradicional bebida japonesa.", tags: ["bebida", "alcoólico"], categoria: "Bebidas"}
+      { nome: "Hot Roll", preco: "R$25,90", img: "src/img/Produtos/Hot Roll.jpg", desc: "Deliciosos rolos de sushi empanados e fritos, com recheio de salmão e cream cheese.", tags: ["quente", "crocante", "favorito"], categoria: "Sushis" },
+      { nome: "Temaki de Salmão", preco: "R$29,90", img: "src/img/Produtos/Temaki de Salmão.jpg", desc: "Cone de alga recheado com arroz, salmão fresco e cebolinha.", tags: ["frio", "salmão"], categoria: "Sushis" },
+      { nome: "Uramaki", preco: "R$24,90", img: "src/img/Produtos/Urakami.jpg", desc: "Sushi enrolado com o arroz por fora, recheado com salmão e manga.", tags: ["frio"], categoria: "Sushis" },
+      { nome: "Sashimi", preco: "R$32,90", img: "src/img/Produtos/Sashimi.jpg", desc: "Fatias finas de peixe fresco, servido puro.", tags: ["frio", "clássico"], categoria: "Sashimis" },
+      { nome: "Sushi de Camarão", preco: "R$27,90", img: "src/img/baixados.jpeg", desc: "Bolinho de arroz coberto com camarão cozido.", tags: ["frio", "camarão"], categoria: "Sushis" },
+      { nome: "Sushi Vegano", preco: "R$23,90", img: "src/img/Produtos/Sushi Vegano.jpg", desc: "Opção vegana com pepino, manga e abacate.", tags: ["vegano", "frio"], categoria: "Sushis" },
+      { nome: "Gyoza", preco: "R$18,90", img: "src/img/Produtos/gyoza.jpg", desc: "Pastéis japoneses recheados com carne e vegetais.", tags: ["quente"], categoria: "Entradas" },
+      { nome: "Sunomono", preco: "R$15,90", img: "src/img/Produtos/Sunomono.jpg", desc: "Salada de pepino agridoce com gergelim.", tags: ["salada", "vegano"], categoria: "Entradas" },
+      { nome: "Yakissoba", preco: "R$28,90", img: "src/img/Produtos/Yakissoba.jpg", desc: "Macarrão frito com vegetais e carne.", tags: ["quente", "massa"], categoria: "Pratos Quentes" }, // Categoria adicionada
+      { nome: "Guioza de frango", preco: "R$19,90", img: "src/img/Produtos/Guioza de Frango.jpg", desc: "Pastéis japoneses recheados com frango e vegetais.", tags: ["quente"], categoria: "Entradas" },
+      { nome: "Refrigerante", preco: "R$6,00", img: "src/img/Produtos/Refrigerante.jpg", desc: "Lata de 350ml, diversos sabores.", tags: ["bebida"], categoria: "Bebidas" },
+      { nome: "Sake", preco: "R$12,00", img: "src/img/Produtos/Sake.jpg", desc: "Dose da tradicional bebida japonesa.", tags: ["bebida", "alcoólico"], categoria: "Bebidas"}
   ];
   let currentQty = 1;
 
