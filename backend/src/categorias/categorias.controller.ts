@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, NotFoundException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { CategoriasService } from './categorias.service';
 import { Categoria } from './categoria.model';
 
