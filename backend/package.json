@@ -1,0 +1,19 @@
+{
+  "type": "commonjs",
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "sum.js",
+  "scripts": {
+    "lint": "eslint . --max-warnings=5",
+    "test": "jest --coverage --passWithNoTests",
+    "audit": "npm audit --audit-level=high"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "eslint": "^9.27.0",
+    "jest": "^29.7.0"
+  }
+}
