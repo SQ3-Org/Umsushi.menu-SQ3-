@@ -1,0 +1,39 @@
+name: CI Pipeline Backend
+
+on:
+  pull_request:
+    branches:
+      - develop
+      - main
+      
+    paths:
+      - 'backend/**'
+
+jobs:
+  continuous-integration-backend:
+    runs-on: ubuntu-latest
+    name: Backend CI
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Instalar dependências backend
+        run: npm ci
+        working-directory: backend
+
+      - name: Rodar Linter backend
+        run: npm run lint
+        working-directory: backend
+
+      - name: Rodar testes backend
+        run: npm test
+        working-directory: backend
+
+      - name: Rodar auditoria de segurança backend
+        run: npm audit
+        working-directory: backend
