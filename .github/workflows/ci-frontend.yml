@@ -19,7 +19,7 @@ jobs:
           node-version: '22'
 
       - name: Instalar dependências frontend
-        run: npm ci
+        run: npm install
         working-directory: frontend
 
       - name: Rodar Linter frontend
