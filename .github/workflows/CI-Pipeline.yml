@@ -36,7 +36,6 @@ jobs:
         working-directory: backend
 
   frontend:
-    if: contains(github.event.pull_request.changed_files, 'frontend/')
     runs-on: ubuntu-latest
     name: Frontend CI
     steps:
