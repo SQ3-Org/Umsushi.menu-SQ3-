@@ -1,0 +1,65 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    paths:
+      - 'backend/**'
+      - 'frontend/**'
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    name: Backend CI
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Instalar dependências backend
+        run: npm ci
+        working-directory: backend
+
+      - name: Rodar Linter backend
+        run: npm run lint
+        working-directory: backend
+
+      - name: Rodar testes backend
+        run: npm test
+        working-directory: backend
+
+      - name: Rodar auditoria de segurança backend
+        run: npm audit
+        working-directory: backend
+
+  frontend:
+    if: contains(github.event.pull_request.changed_files, 'frontend/')
+    runs-on: ubuntu-latest
+    name: Frontend CI
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      - name: Instalar dependências frontend
+        run: npm ci
+        working-directory: frontend
+
+      - name: Rodar Linter frontend
+        run: npm run lint
+        working-directory: frontend
+
+      - name: Rodar testes frontend
+        run: npm test
+        working-directory: frontend
+
+      - name: Rodar auditoria de segurança frontend
+        run: npm audit
+        working-directory: frontend
