@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Rubik;
+    src: url("../src/fonts/Rubik-VariableFont_wght.ttf");
+}
+@font-face {
+    font-family: IndieFlower;
+    src: url("../src/fonts/IndieFlower-Regular.ttf");
+}
+
+@import "tailwindcss";
+
+@theme {
+    --font-rubik: Rubik, "sans-serif"
+}
+@theme {
+    --font-indieflower: IndieFlower, 'Poppins'
+}

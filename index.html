@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="[&::-webkit-scrollbar]:hidden">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/dist/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+
+
+  <title>UmSushi - Cardapio</title>
+
+</head>
+
+<body class="bg-gradient-to-b from-red-900 via-gray-800 to to-black min-h-screen flex flex-col overflow-x-hidden m-0 p-0 font-rubik flex-col w-full">
+
+  <header class="bg-transparent w-full relative">
+    <div class="relative flex items-center justify-between px-4 md:px-12 py-4">
+      <button id="menu-btn" aria-label="Menu" class="text-white text-3xl md:hidden z-10">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="w-8 md:hidden"></div>
+      <a href="#" id="logo-btn" class="block z-20">
+        <div class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-[38%] z-10">
+        <div class="relative w-[220px] h-[220px] md:w-[300px] md:h-[300px] mx-auto">
+          <img src="/src/img/pauzinhos-sushi.png" alt="pauzinhos" class="absolute inset-0 top-1/2 left-1/2 w-[150px] md:w-[200px] h-auto -translate-x-1/2 -translate-y-1/2 rotate-[10deg] z-0 pointer-events-none object-contain ">
+          <div class="absolute inset-0 z-10 flex items-center justify-center">
+            <img src="/src/img/fundo-vermelho.jpg" alt="logo-vermelha" class="w-[90px] h-[90px] md:w-[120px] md:h-[120px] rounded-full ring-4 ring-gray-200 object-cover">
+          </div>
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+            <span class="logo-font text-white text-3xl select-none font-logo">UmSushi</span>
+          </div>
+        </div>
+      </div>
+      </a>
+      <button aria-label="Carrinho" class="text-white text-3xl z-10">
+        <i class="fas fa-shopping-cart"></i>
+      </button>
+    </div>
+        
+    <div class="h-1 bg-gray-200/90 relative z-0"></div>
+
+    <nav id="filtros-nav" class=" px-12 py-3">
+      <div class="flex justify-between text-white text-lg">
+        <div class="flex space-x-60">
+          <a href="#" class="filtro-link active hover:text-yellow-500" data-categoria="Sushis">Sushis</a>
+          <a href="#" class="filtro-link hover:text-yellow-500" data-categoria="Sashimis">Sashimis</a>
+        </div>
+        <div class="flex space-x-60">
+          <a href="#" class="filtro-link hover:text-yellow-500" data-categoria="Entradas">Entradas</a>
+          <a href="#" class="filtro-link hover:text-yellow-500" data-categoria="Bebidas">Bebidas</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-grow bg-transparent px-12 pt-10 pb-10 relative">
+    <form class="relative max-w-xl mx-auto mb-10">
+      <label for="search" class="sr-only">Buscar</label>
+      <input type="text" id="search" placeholder="Buscar Produtos..." autocomplete="off" class="w-full rounded-t-md rounded-b-0 py-3 pl-14 pr-6 text-gray-700 text-lg focus:outline-none shadow-md bg-white/40 backdrop-blur-sm transition duration-300">
+
+      <span class="absolute left-5 top-1/2 -translate-y-1/2 text-gray-400 text-xl">
+        <i class="fas fa-search"></i>
+      </span>  
+<!--Sugestoes da Search-Bar-->
+      <ul id="suggestions" class="absolute z-10 mt-0 w-full bg-white/40 backdrop-blur-sm shadow-lg rounded-b-md hidden max-h-60 overflow-y-auto p-2 cursor-pointer [&::-webkit-scrollbar]:hidden">
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Hot Roll</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$25,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Temaki de Frango</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$29,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Urakami</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$24,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Sashimi</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$32,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Sushi de Camarão</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$27,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Sushi Vegano</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$23,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Gyoza</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$18,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Sunomono</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$15,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Yakissoba</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$28,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Guizoa de Frango</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$19,90</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Refrigerante</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$6,00</span>
+        </li>
+        <li class="flex items-center justify-between px-4 py-3 hover:bg-transparent transition duration-200">
+          <div class="flex items-center space-x-4">
+            <span class="text-gray-800 font-medium">Sake</span>
+          </div>
+          <span class="text-yellow-700 font-semibold">R$12,00</span>
+        </li>
+      </ul>
+    </form>
+
+    <div id="produtos-grid" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"></div>
+    
+  </main>
+
+<!--Modal do Grid-->
+  <div id="modal" class="fixed inset-0 bg-black/40 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 w-[90%] max-w-lg relative">
+      <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-red-500 text-xl font-bold">&times;</button>
+      <div class=" flex items-center">
+        <img id="modal-img" src="/src/img/fundo-vermelho.jpg" alt="produto" class="w-1/2 h-48 object-cover rounded-lg mb-4"/>
+        <div class="flex flex-col flex-1 pl-6">
+          <h2 id="modal-nome" class="text-2xl font-bold mb-2">aaa</h2>
+          <p id="modal-desc" class="text-sm text-gray-600 mb-4">aaaaaaa</p>
+          <div id="modal-tags" class="flex flex-wrap gap-2 mb-4"></div>
+          <div class="flex items-center justify-between mt-auto">
+            <div class="flex items-center gap-2">
+              <button id="decrement" class="px-2 py-1 bg-gray-200 rounded">-</button>
+              <span id="quantity" class="w-8 text-center">1</span>
+              <button id="increment" class="px-2 py-1 bg-gray-200 rounded">+</button>
+            </div>
+            <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600 transition"><i class="fas fa-shopping-cart"></i></button>
+          </div>
+        </div>
+      </div>  
+    </div>
+  </div>
+
+  <script src="/src/UmShusi.js" defer></script>
+</body>
+</html>
