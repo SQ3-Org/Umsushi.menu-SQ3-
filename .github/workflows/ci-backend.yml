@@ -21,7 +21,7 @@ jobs:
         run: npm ci
 
       - name: Rodar Linter
-        run: npx eslint . --max-warnings=5
+        run: npm lint
 
       - name: Rodar testes
         run: npm test
