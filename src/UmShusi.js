@@ -19,10 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
       { nome: "Sashimi", preco: "R$32,90", img: "src/img/Produtos/Sashimi.jpg", desc: "Fatias finas de peixe fresco, servido puro.", tags: ["frio", "clássico"], categoria: "Sashimis" },
       { nome: "Sushi de Camarão", preco: "R$27,90", img: "src/img/baixados.jpeg", desc: "Bolinho de arroz coberto com camarão cozido.", tags: ["frio", "camarão"], categoria: "Sushis" },
       { nome: "Sushi Vegano", preco: "R$23,90", img: "src/img/Produtos/Sushi Vegano.jpg", desc: "Opção vegana com pepino, manga e abacate.", tags: ["vegano", "frio"], categoria: "Sushis" },
-      { nome: "Gyoza", preco: "R$18,90", img: "src/img/Produtos/gyoza.jpg", desc: "Pastéis japoneses recheados com carne e vegetais.", tags: ["quente"], categoria: "Entradas" },
+      { nome: "Gyoza", preco: "R$18,90", img: "src/img/Produtos/Gyoza.jpg", desc: "Pastéis japoneses recheados com carne e vegetais.", tags: ["quente"], categoria: "Entradas" },
       { nome: "Sunomono", preco: "R$15,90", img: "src/img/Produtos/Sunomono.jpg", desc: "Salada de pepino agridoce com gergelim.", tags: ["salada", "vegano"], categoria: "Entradas" },
       { nome: "Yakissoba", preco: "R$28,90", img: "src/img/Produtos/Yakissoba.jpg", desc: "Macarrão frito com vegetais e carne.", tags: ["quente", "massa"], categoria: "Pratos Quentes" }, // Categoria adicionada
-      { nome: "Guioza de frango", preco: "R$19,90", img: "src/img/Produtos/Guioza de Frango.jpg", desc: "Pastéis japoneses recheados com frango e vegetais.", tags: ["quente"], categoria: "Entradas" },
+      { nome: "Guioza de frango", preco: "R$19,90", img: "src/img/Produtos/Guioza_de_Frango.jpg", desc: "Pastéis japoneses recheados com frango e vegetais.", tags: ["quente"], categoria: "Entradas" },
       { nome: "Refrigerante", preco: "R$6,00", img: "src/img/Produtos/Refrigerante.jpg", desc: "Lata de 350ml, diversos sabores.", tags: ["bebida"], categoria: "Bebidas" },
       { nome: "Sake", preco: "R$12,00", img: "src/img/Produtos/Sake.jpg", desc: "Dose da tradicional bebida japonesa.", tags: ["bebida", "alcoólico"], categoria: "Bebidas"}
   ];
