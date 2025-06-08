@@ -23,7 +23,7 @@ jobs:
         working-directory: frontend
 
       - name: Rodar Linter frontend
-        run: npm run lint
+        run: npx eslint . --max-warnings=5
         working-directory: frontend
 
       - name: Rodar testes frontend
