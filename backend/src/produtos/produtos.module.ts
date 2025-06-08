@@ -1,9 +1,11 @@
+// produtos.module.ts
 import { Module } from '@nestjs/common';
-import { ProdutosController } from './produtos.controller';
 import { ProdutosService } from './produtos.service';
+import { ProdutosController } from './produtos.controller';
+import { CategoriasService } from '../categorias/categorias.service'; // ✅
 
 @Module({
   controllers: [ProdutosController],
-  providers: [ProdutosService],
+  providers: [ProdutosService, CategoriasService], // ✅ injeta aqui
 })
 export class ProdutosModule {}

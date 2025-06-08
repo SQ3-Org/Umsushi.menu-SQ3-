@@ -1,13 +1,23 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, NotFoundException } from '@nestjs/common';
 import { CategoriasService } from './categorias.service';
 import { Categoria } from './categoria.model';
 
 @Controller('categorias')
 export class CategoriasController {
-  constructor(private readonly service: CategoriasService) {}
+  constructor(private readonly categoriasService: CategoriasService) {}
 
   @Get()
   findAll(): Categoria[] {
-    return this.service.findAll();
+    return this.categoriasService.findAll();
+  }
+
+  @Post()
+  create(@Body() data: Omit<Categoria, 'id'>): Categoria {
+    return this.categoriasService.create(data);
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: number): Categoria {
+    return this.categoriasService.findOne(+id);
   }
 }
